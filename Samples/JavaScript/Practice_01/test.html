@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="jquery.treeview.css">
+<style>
+a {
+  color:#4169e1;
+  text-decoration:none;
+}
+ 
+a:hover {
+  color:#6495ed;
+  text-decoration:underline;
+}
+</style>
+<script src="jquery.min.js"></script>
+<script src="jquery.treeview.js"></script>
+<script>
+ 
+window.onload = function (){
+  $("#TreeView").treeview();
+}
+ 
+</script>
+</head>
+<body> 
+<div id ="TreeView_Area">
+  <ul id="TreeView" class="filetree">
+    <li><span class="folder">マイコンピュータ</span>
+      <ul>
+        <li class="closed"><span class="folder">C&yen;</span>
+          <ul>
+           <li><span class="file"><a href="#">123.txt</a></span></li>
+           <li><span class="file"><a href="#">456.txt</a></span></li>
+          </ul>
+        </li>
+        <li><span class="folder">D&yen;</span>
+          <ul>
+           <li><span class="file"><a href="#">abc.txt</a></span></li>
+           <li><span class="file"><a href="#">def.txt</a></span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>    
+  </ul>
+</div>
+</body>
+</html> 
