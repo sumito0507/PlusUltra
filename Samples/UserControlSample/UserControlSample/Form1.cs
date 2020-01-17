@@ -12,14 +12,23 @@ namespace Sample
 {
     public partial class Form1 : Form
     {
+        private static log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public Form1()
         {
             InitializeComponent();
+            logger.Fatal("log1");
+            logger.Error("log2");
+            logger.Warn("log3");
+            logger.Info("log4");
+            logger.Debug("log5");
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            var aaaa = new RazorSample();
+            aaaa.Create();
         }
 
         private void textBoxEx1_TextChanged(object sender, EventArgs e)

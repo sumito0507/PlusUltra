@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-    <startup> 
-        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
-    </startup>
-  <!--<log4net>
+  <log4net>
     <appender name="tryLogAppender" type="log4net.Appender.RollingFileAppender" >
       <File value=".\log\" />
       <DatePattern value='yyyyMMdd".log"' />
@@ -24,5 +21,5 @@
       <level value="Debug" />
       <appender-ref ref="tryLogAppender" />
     </root>
-  </log4net>-->
+  </log4net>
 </configuration>
