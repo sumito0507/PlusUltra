@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppExcel", "WindowsFormsAppExcel\WindowsFormsAppExcel.csproj", "{70DA8544-7BB6-42A1-B333-75AC3F3FFD27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClosedXmlSample", "ClosedXmlSample\ClosedXmlSample.csproj", "{C3D5D24F-7295-4225-916B-3D619769AA86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70DA8544-7BB6-42A1-B333-75AC3F3FFD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DA8544-7BB6-42A1-B333-75AC3F3FFD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DA8544-7BB6-42A1-B333-75AC3F3FFD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DA8544-7BB6-42A1-B333-75AC3F3FFD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D5D24F-7295-4225-916B-3D619769AA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D5D24F-7295-4225-916B-3D619769AA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D5D24F-7295-4225-916B-3D619769AA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D5D24F-7295-4225-916B-3D619769AA86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADA98F31-37AD-4DE0-94CA-1641B3AA5F1C}
+	EndGlobalSection
+EndGlobal
