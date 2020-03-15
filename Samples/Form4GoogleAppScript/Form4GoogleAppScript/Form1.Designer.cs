@@ -33,6 +33,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxAccessToken = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,10 +46,10 @@
             this.buttonPost.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonPost.FlatAppearance.BorderSize = 3;
             this.buttonPost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPost.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonPost.Location = new System.Drawing.Point(629, 49);
+            this.buttonPost.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonPost.Location = new System.Drawing.Point(619, 61);
             this.buttonPost.Name = "buttonPost";
-            this.buttonPost.Size = new System.Drawing.Size(75, 42);
+            this.buttonPost.Size = new System.Drawing.Size(106, 58);
             this.buttonPost.TabIndex = 0;
             this.buttonPost.Text = "POST";
             this.buttonPost.UseVisualStyleBackColor = false;
@@ -69,12 +73,44 @@
             // 
             this.textBoxResult.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.textBoxResult.Font = new System.Drawing.Font("メイリオ", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxResult.Location = new System.Drawing.Point(48, 49);
+            this.textBoxResult.Location = new System.Drawing.Point(34, 180);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxResult.Size = new System.Drawing.Size(498, 70);
+            this.textBoxResult.Size = new System.Drawing.Size(496, 245);
             this.textBoxResult.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(30, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Result";
+            // 
+            // textBoxAccessToken
+            // 
+            this.textBoxAccessToken.Location = new System.Drawing.Point(34, 61);
+            this.textBoxAccessToken.Multiline = true;
+            this.textBoxAccessToken.Name = "textBoxAccessToken";
+            this.textBoxAccessToken.Size = new System.Drawing.Size(496, 58);
+            this.textBoxAccessToken.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(30, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Access Token";
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
             // 
             // Form1
             // 
@@ -82,6 +118,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxAccessToken);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonPost);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -102,6 +141,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxAccessToken;
+        private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

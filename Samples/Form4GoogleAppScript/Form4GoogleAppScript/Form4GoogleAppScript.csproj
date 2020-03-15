@@ -81,6 +81,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRunning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRunning.Designer.cs">
+      <DependentUpon>FormRunning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundButton.cs">
@@ -92,6 +98,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRunning.resx">
+      <DependentUpon>FormRunning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -100,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +124,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icon_loader_c_ww_01_s1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\sozai_cman_jp_20200315133736.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\712-88.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\89-66.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\359-66.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

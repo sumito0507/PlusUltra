@@ -10,6 +10,9 @@ using System.Windows.Forms;
 /**
  * [Google Apps Script]認証が必要なウェブアプリケーションを外部から実行する
  * https://www.ka-net.org/blog/?p=12258
+ * 
+ * アクセストークン作成
+ * https://www.pre-practice.net/2019/07/freee-api_20.html
  */
 namespace Form4GoogleAppScript
 {
@@ -18,6 +21,8 @@ namespace Form4GoogleAppScript
     using System.Net.Http.Headers;
     using System.Text.Json;
     using System.Text.Json.Serialization;
+    using System.Threading;
+
     public partial class Form1 : Form
     {
         /// <summary>
@@ -39,7 +44,8 @@ namespace Form4GoogleAppScript
         private static HttpClient _HttpClient = new HttpClient();
 
         private string _Result = "";
-
+        //別スレッド用メンバ変数を用意
+        Thread m_nowLoading = null;
         /// <summary>
         /// マウスのクリック位置
         /// </summary>
@@ -59,6 +65,10 @@ namespace Form4GoogleAppScript
         {
             InitializeComponent();
             this.ContextMenuStrip = this.contextMenuStrip1;
+            //コンストラクタ内で変数を初期化
+            m_nowLoading = new Thread(new ThreadStart(NowLoadingProc));
+            m_nowLoading.IsBackground = true;
+
         }
 
         private void SendData()
@@ -102,14 +112,14 @@ namespace Form4GoogleAppScript
         /// <summary>
         /// HttpClientを使ったデータ送信
         /// </summary>
-        private async void SendDatabyHttpClient()
+        private async void SendDatabyHttpClient(string token)
         {
+            m_nowLoading.Start();
             try
             {
 
-
                 // OAuth2認証
-                _HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _AccessToken);
+                _HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 //            var dict = new Dictionary<string, string>() 
                 //{
                 //    { "type", "embed" },
@@ -131,9 +141,25 @@ namespace Form4GoogleAppScript
                 MessageBox.Show(e.Message);
                 //return null;
             }
+            m_nowLoading.Abort();
         }
 
+        //アニメーションGIFを張り付けた Form (frmLoading)の表示処理
+        private void NowLoadingProc()
+        {
+            FormRunning frmLoad = new FormRunning();
+            try
+            {
+                frmLoad.ShowDialog();
+                frmLoad.Dispose();
+            }
+            catch (ThreadAbortException)
+            {
+                frmLoad.Close();
+            }
+        }
 
+        #region イベント
         /// <summary>
         /// [イベント]POST送信ボタンクリック
         /// </summary>
@@ -141,6 +167,7 @@ namespace Form4GoogleAppScript
         /// <param name="e"></param>
         private void buttonPost_Click(object sender, EventArgs e)
         {
+            // コマンド
             string command = $"curl -L -d 'Hello world.' -H " + @"""Authorization: Bearer ya29.a0Adw1xeXh5loTQHLmCvfUkUafXb16bpBtY8jN_vKMcczkiyEpyu7_MtYzRBu-09oyp4TmGUuVHDJKqdc0JmvvLDg5bz2YcC8Lc1uQj-cTf87kRmPCSKSLm9f8HXN4wqeM32NZHC30VzBEcINJsX-NUzdUSXee9H6sNM0""" + " " + @"""https://script.google.com/macros/s/AKfycbwo2b2z56QS8d5I1clxqI5nw-3jJNQlhC_NsboS8QGFvd09oWwX/exec""";
 #if false
             Process proc = new Process();
@@ -150,7 +177,14 @@ namespace Form4GoogleAppScript
             proc.WaitForExit();
             Console.WriteLine(proc.ExitCode.ToString());
 #endif
-            SendDatabyHttpClient();
+            if (String.IsNullOrWhiteSpace(textBoxAccessToken.Text))
+            {
+                MessageBox.Show("Set Access Token !");
+                return;
+            }
+
+            SendDatabyHttpClient(textBoxAccessToken.Text);
+
         }
 
         /// <summary>
@@ -234,5 +268,7 @@ namespace Form4GoogleAppScript
                 //    this.Location.Y + e.Y - mousePoint.Y);
             }
         }
+
+        #endregion
     }
 }
