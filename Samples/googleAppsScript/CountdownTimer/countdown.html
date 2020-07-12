@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <title>依頼を受け付けました。</title>
+  <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
+</head>
+
+<body>
+  <p class="now-time-title">受け付けました。</p>
+  <p class="now-time-title">画面は5秒後に自動的に閉じます。</p>
+  <input type="button" onClick="SelfClose()" value="すぐ閉じる"><br>
+  <div id="result"></div>
+  <!--<script src="countdown.js"></script>-->
+  <?!= HtmlService.createHtmlOutputFromFile('closejs').getContent(); ?>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<script>
+    function SelfClose() {
+        window.top.close();
+        console.log("クリック！");
+    }
+
+    var count = 5;
+    var countdown = function () {
+        document.getElementById('result').textContent = count.toString();
+        console.log(count--);
+        var id = setTimeout(countdown, 1000);
+        if (count < 0) {
+            clearTimeout(id);
+            SelfClose();
+        }
+    }
+
+    window.onload = function () {
+        console.log("This onload did run");
+        countdown();
+
+        //    setTimeout(function(){ window.top.close(); }, 3000);
+    };
+
+</script>
