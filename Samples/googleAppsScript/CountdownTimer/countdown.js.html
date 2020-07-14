@@ -1,0 +1,17 @@
+<script>
+  var count = 5;
+  function SelfClose(){
+ 　　window.top.close();
+    console.log("クリック！");
+  }
+  var countdown = function(){
+    document.getElementById('result').textContent = count.toString();
+    console.log(count--);
+    var id = setTimeout(countdown, 1000);
+    if(count < 0){
+//      clearTimeout(id);
+     SelfClose();
+    }
+  }
+  countdown();
+</script>
