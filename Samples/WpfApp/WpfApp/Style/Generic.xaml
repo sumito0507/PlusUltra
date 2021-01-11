@@ -17,5 +17,24 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
-
+    <Style x:Key="FlatButton" TargetType="Button" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <!-- デフォルトのテーマを無効化 -->
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="3" Background="{TemplateBinding Background}">
+                        <ContentPresenter />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!-- マウスオーバーした時に色を変える -->
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="#CDD2D4"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
 </ResourceDictionary>
