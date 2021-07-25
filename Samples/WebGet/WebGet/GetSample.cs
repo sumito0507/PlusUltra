@@ -8,18 +8,29 @@ namespace WebGet
 {
     class GetSample
     {
-        public bool Execute(string url)
+        public bool Execute(string url, Dictionary<string, string> parameters)
         {
             try
             {
+                var urlparam = url + "?";
+                foreach (var item in parameters)
+                {
+                    //URLエンコードする
+                    string urlEnc = System.Web.HttpUtility.UrlEncode(item.Value);
+                    urlparam += $"{item.Key}={urlEnc}";
+                }
+
 
                 //HttpWebRequestを作成
 #if false
                 System.Net.HttpWebRequest webreq = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
                 //または、
 #else
-                System.Net.WebRequest webreq = System.Net.WebRequest.Create(url);
+                System.Net.WebRequest webreq = System.Net.WebRequest.Create(urlparam);
 #endif
+                System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", "--new- window " + urlparam);
+
+
                 //サーバーからの応答を受信するためのHttpWebResponseを取得
                 System.Net.HttpWebResponse webres = (System.Net.HttpWebResponse)webreq.GetResponse();
                 //または、
