@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.gorilla-web.net/demo/google_form2/1.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Google Formで作成したフォームをアレンジする｜U_SAY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./Google_Form_Customize_files/common.css" rel="stylesheet" type="text/css">
+  <link href="./Google_Form_Customize_files/form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <center>
+        <h1>Google Formで作成したフォームをアレンジする</h1>
+      </center>
+    </header>
+
+    <style>
+      header {
+        color: white;
+        width: 100%;
+        height: 62px;
+        background-color: #8dc21f;
+      }
+
+      header h1 {
+        color: #fff;
+        font-size: 29px;
+        width: 80%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 auto;
+        height: 65px;
+        line-height: 65px;
+      }
+    </style>
+
+    <h1>Google Form カスタマイズデモ</h1>
+    <div id="formm">
+
+      <form
+        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSd2oqcCuCixdbNA8oooYsN6-1dQTRe8Gg22fCOV0bEk4SsO-A/formResponse"
+        method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <ul>
+          <li>
+            お名前
+            <input name="entry.1374190194" type="text" required="required" id="textfield" class="g_form"
+              placeholder="お名前">
+          </li>
+
+          <li>年齢
+            <input name="entry.896360449" required="required" type="number" class="g_form" id="textfield2"
+              placeholder="年齢">
+          </li>
+
+          <li>お問い合わせ内容<textarea name="entry.427275093" required="required" class="g_form_text" id="textarea"
+              placeholder="お問い合わせ内容"></textarea>
+          </li>
+
+          <li>
+            <input type="submit" class="btbt">
+          </li>
+
+        </ul>
+
+        <script type="text/javascript">
+          var submitted = false;
+        </script>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+          onload="if(submitted){window.location='thanks.html';}"></iframe>
+
+      </form>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
