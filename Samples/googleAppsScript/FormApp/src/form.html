@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+
+    <?!=include('form.css');?>
+    <title>お客様アンケート</title>
+  </head>
+  <body>
+    <main>
+        <div class="container">
+          <script type="text/javascript">  
+            var submitted = false;  
+            var currentURL = window.location.href;
+          </script>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location=currentURL + 'thanks.html';}"></iframe>
+          
+            <form id="form" action="" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <h1>お客様アンケート</h1>
+                <!-- 申請内容 -->
+                <div class="block">
+                    <label class="block-title">フィードバックの種類</label>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="detail1" name="detail" class="radio-inline__input" checked>
+                        <label for="detail1" class="radio-inline__label">コメント</label>
+                        <input type="radio" id="detail2" name="detail" class="radio-inline__input">
+                        <label for="detail2" class="radio-inline__label">質問</label>
+                        <input type="radio" id="detail3" name="detail" class="radio-inline__input">
+                        <label for="detail3" class="radio-inline__label">バグの報告</label>
+                        <input type="radio" id="detail4" name="detail" class="radio-inline__input">
+                        <label for="detail4" class="radio-inline__label">機能のリクエスト</label>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <label for="feedback" class="block-title">フィードバック</label>
+                    <input type="text" id="feedback">
+                </div>
+                <div class="block">
+                    <label for="description" class="block-title">改善の提案</label>
+                    <input type="text" id="description"></input>
+                </div>
+                <div class="block">
+                    <label for="custmer" class="block-title">お名前</label>
+                    <input type="text" id="custmer">
+                </div>
+                <div class="block">
+                    <label for="mailaddress" class="block-title">メールアドレス</label>
+                    <input type="text" id="mailaddress">
+                    <span class="error-message mail-error">メールアドレスを正しく入力してください。</span>
+                </div>
+
+                <div class="button-wrapper">
+                    <span class="submit">送信</span>
+                </div>
+            </form>
+        </div>
+         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSewC8UZGcbYxS4NNXmWMLTayKaUjsOXXyPySF_cchBfdWJU_A/formResponse" method="POST" id="mG61Hd">
+            <input type="hidden" id="detail_val" name="entry.1591633300" value="コメント">
+            <input type="hidden" id="feedback_val" name="entry.326955045" value="">
+            <input type="hidden" id="description_val" name="entry.1696159737" value="">
+            <input type="hidden" id="custmer_val" name="entry.485428648" value="">
+            <input type="hidden" id="mailaddress_val" name="entry.879531967" value="">
+        </form>
+ 
+     </main>
+
+
+    <!-- jQueryのCDNを読み込んで使えるようにする -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //送信ボタンクリック時hedden項目のformをサブミットする
+            $('.submit').on('click', function(e){
+              let errorFlag = false;
+              const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
+              if($('#mailaddress_val').val() === ''){
+                errorFlag = true;
+                $('.mail-error').show();
+              }else if(reg.test(address)){
+                errorFlag = true;
+                $('.mail-error').show();
+              }else{
+                $('.mail-error').hide();
+              }
+              // 送信
+              $('#mG61Hd').submit();
+            });
+
+            //「申請内容」項目が変更されたときに対応するhidden項目の値も変更
+            $('#detail').on('change', function(e){
+                $('#detail_val').val($(this).val());
+            });
+            // フィードバック
+            $('input[name="feedback"]').on('change', function(e){
+                $('#feedback_val').val($(this).next().text());
+            });
+            // 改善案
+            $('input[name="description"]').on('change', function(e){
+                $('#description_val').val($(this).next().text());
+            });
+            // 名前
+            $('input[name="custmer"]').on('change', function(e){
+                $('#custmer_val').val($(this).next().text());
+            });
+            // メールアドレス
+            $('input[name="mailaddress"]').on('change', function(e){
+                $('#mailaddress_val').val($(this).next().text());
+            });
+        });
+    </script>
+  </body>
+</html>

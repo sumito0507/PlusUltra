@@ -1,0 +1,133 @@
+<style>
+* {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+main {
+    width: 100vw;
+    margin: auto;
+    color: #fff;
+}
+.container {
+	min-height: 120px;
+	background-color: #f7f7f7;
+  background-image: url("https://drive.google.com/uc?id=1mGF80zlh9Qh6icGAlgvb9VKbb5PzLf1e");
+  background-position:center top;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  text-align: center;
+}
+h1 {
+  position: relative;
+  display: inline-block;
+  padding:50px 55px;
+  font-size: 50px;
+}
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+}
+h1:before {
+  left:0;
+}
+h1:after {
+  right: 0;
+}
+.block {
+    height: 200px;
+    margin: 50px 100px 50px 100px;
+    display: flex;
+    background: rgb(30,30,30,0.7);
+    width: 80%;
+    flex-direction: column;
+    text-align: left;
+}
+.block-title {
+    font-size: 26px;
+    font-weight: bolder;
+    margin: 20px;
+    border-bottom: 1px solid #eee;
+}
+.block label {
+    height: 30px;
+}
+.detail_checks input {
+    margin: 10px;
+}
+input {
+    font-size: 20px;;
+    margin: 20px;
+}
+
+input[type="number"] {
+    height:30px;
+    width: 150px;
+}
+input[type="date"] {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    color: #999;
+}
+.radio-wrapper {
+    display:flex;
+}
+.radio-inline__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+.radio-inline__label {
+    display: inline-block;
+    padding: 10px 50px;
+    margin: 10px;
+    border-radius: 3px;
+    transition: all .2s;
+    background: #fff;
+    color: #444;
+    font-weight: bolder;
+    cursor:pointer;  
+    font-size: 20px;
+}
+.radio-inline__input:checked + .radio-inline__label {
+    background: #CC6666;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+.submit {
+  width: 100%;
+  background:#673ab7;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:#fff;
+  font-size:24px;
+  padding:10px 100px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+  box-sizing:border-box;
+}
+.submit:hover {
+    color: #fff;
+    background: #884EF4;
+}
+.button-wrapper {
+    width: 80%;
+    text-align: left;    
+    margin: 0px 100px;
+    padding-bottom: 30px;
+}
+.error-message {
+    color: #ed4055;
+    padding: 5px;
+    font-size: 20px;
+}
+.cost-error,.date-error {
+    display:none;
+}
+</style>
