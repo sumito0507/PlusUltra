@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base target="_top">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div id="formWrapper">
+		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOuycpi_m4f4ULHxWhOQIkiBhelEpS5pTOtlsBdmANE_LZPA/formResponse"
+			name="myForm" target="_self" method="POST" id="mG61Hd">
+      <!-- target="dummyIframe" -->
+      <div>
+  			<label>お名前
+					<input type="text" required="required" name="entry.796466383" id="entry.796466383" class="g_form" placeholder="お名前">
+        </label>
+      </div>
+      <div>
+	  		<label>
+					なにか
+          <textarea required class="g_form_text" name="entry.796466383" id="entry.1818466636" placeholder="その他お問い合わせ"><?= getUserAccount(); ?></textarea>
+  			</label>
+      </div>
+
+					<!-- <input type="submit" class="btbt" value="送信する"> -->
+					<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
+
+		</form>
+		<iframe name="dummyIframe" style="display:none;"></iframe>
+	</div>
+	<div id="thxMessage" style="display:none;">
+		<p>お問い合わせありがとうございました。</p>
+	</div>
+</body>
+<script>
+	function submitForm(){
+    console.log("submitForm() start.");
+    document.myForm.submit();
+    // document.getElementById('formWrapper').style.display = 'none';
+    // document.getElementById('thxMessage').style.display = 'block';
+    console.log("submitForm() end.");
+  }
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</html>
