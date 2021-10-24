@@ -7,7 +7,5 @@
     "executeAs": "USER_DEPLOYING",
     "access": "MYSELF"
   },
-  "oauthScopes": [
-    "https://www.googleapis.com/auth/userinfo.email"
-  ]
+  "oauthScopes": ["https://www.googleapis.com/auth/userinfo.email"]
 }

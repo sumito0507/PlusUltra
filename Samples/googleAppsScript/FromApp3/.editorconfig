@@ -1,0 +1,55 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+[*.{html,html,js,ts,gs,json}]
+indent_size = 2
+
+
+#
+# root
+# これをtrueにしておかないとルート・ディレクトリまでたどってしまいます。ただroot機能のおかげで、.editorconfigが同階層に存在しない場合にルートに存在する.editorconfigファイルを参照してくれるわけです。
+# root = trueはかならず最初に書いておくと思っていてください。
+#
+# indent_style
+# ハードタブかソフトタブか。tabかspaceを指定できます。
+#
+# indent_size
+# インデントを半角スペースいくつ分にするか。指定するのは整数であればなんでもいけると思いますが、わたしは2か4しか入れたことがないです。
+#
+# tab_width
+# タブの幅なんですけど、省略するとindent_sizeの数値が適応されます。
+#
+# end_of_line
+# 改行コードの種類lfかcrかcrlfを指定する。
+#
+# charset
+# 文字コード。utf-8指定しておけばよいんじゃないですかね。
+#
+# trim_trailing_whitespace
+# 行末の空白を削除するかどうか。trueかfalseを指定できます。
+#
+# insert_final_newline
+# 最終行に空行を入れるかどうか。trueかfalse。
+#
+# ファイル名の指定方法
+# 特に難しいことはないですが、公式のページに書いてあるモノを掲載しておきます。
+#
+# セレクタ	効果
+# *	"/"を除いた任意の文字列
+# **	任意の文字列
+# ?	任意の一文字
+# [name]	nameに一致するもの
+# [!name]	nameに一致しないもの
+# {s1,s2,s3}	s1,s2,s3に一致する各々
+# 特殊文字からのエスケープはバックスラッシュです。
+# あとコメントアウトは#シャープか;セミコロンです。
+#

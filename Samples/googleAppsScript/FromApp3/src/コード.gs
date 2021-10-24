@@ -1,7 +1,8 @@
+/** @format */
 /**
  * @OnlyCurrentDoc
  */
-/** 
+/**
  * 2020年6月最新版【仕様変更対応済み】Googleフォームを好きなようにカスタマイズする方法
  * https://www.gorilla-web.net/2020new_google_form_custmize/
  * Googleフォームのデザインをカスタマイズする方法 プラグイン不要で簡単実装！
@@ -12,43 +13,40 @@
  * https://makimakimakino.hatenablog.com/entry/2019/04/20/234842
  * GoogleAppsScriptを使ってGoogleフォームの画面を自由にカスタマイズする！
  * https://masa-enjoy.com/gas-createform
-*/
+ */
 
-
-function myFunction() {
-
-}
+function myFunction() {}
 
 function doGet() {
-  const toppage = HtmlService.createTemplateFromFile('index');
-  return toppage.evaluate();
+  const toppage = HtmlService.createTemplateFromFile("index")
+  return toppage.evaluate()
 }
 
 function include(filename) {
-  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+  return HtmlService.createHtmlOutputFromFile(filename).getContent()
 }
 
-function getUserAccount(){
-  console.log(`Session.getUser().getEmail()             = ${Session.getUser().getEmail()}`);
-  console.log(`Session.getActiveUser().getEmail()       = ${Session.getActiveUser().getEmail()}`);
-  console.log(`Session.getActiveUser().getUserLoginId() = ${Session.getActiveUser().getUserLoginId()}`);
-  console.log(`Session.getEffectiveUser().getEmail()    = ${Session.getEffectiveUser().getEmail()}`);
-  return Session.getActiveUser().getEmail();
+function getUserAccount() {
+  console.log(`Session.getUser().getEmail()             = ${Session.getUser().getEmail()}`)
+  console.log(`Session.getActiveUser().getEmail()       = ${Session.getActiveUser().getEmail()}`)
+  console.log(`Session.getActiveUser().getUserLoginId() = ${Session.getActiveUser().getUserLoginId()}`)
+  console.log(`Session.getEffectiveUser().getEmail()    = ${Session.getEffectiveUser().getEmail()}`)
+  return Session.getActiveUser().getEmail()
 }
 
 function doPost(postdata) {
-  console.log(`postdata = ${JSON.stringify(postdata,null,'\t')}`);
+  console.log(`postdata = ${JSON.stringify(postdata, null, "\t")}`)
 
-  var sh = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var time = new Date();
+  var sh = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet()
+  var time = new Date()
 
-  var username = postdata.parameters.username.toString();
-  var description = postdata.parameters.description.toString();
+  var username = postdata.parameters.username.toString()
+  var description = postdata.parameters.description.toString()
 
-  console.info(`username = ${username}`);
-  console.info(`description = ${description}`);
+  console.info(`username = ${username}`)
+  console.info(`description = ${description}`)
   // sh.appendRow([time, username, description]);
 
-  var resultpage = HtmlService.createTemplateFromFile("result");
-  return resultpage.evaluate();
+  var resultpage = HtmlService.createTemplateFromFile("result")
+  return resultpage.evaluate()
 }
