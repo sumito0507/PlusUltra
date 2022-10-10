@@ -1,0 +1,25 @@
+■アクセスURL
+バックエンドへのアクセス
+https://localhost:7235/weatherforecast
+
+■参考
+チュートリアル: Visual Studio での Angular を使用した ASP.NET Core アプリの作成
+https://learn.microsoft.com/ja-jp/visualstudio/javascript/tutorial-asp-net-core-with-angular?view=vs-2022
+ASP.NET Core を使って Web API を作成する
+https://learn.microsoft.com/ja-jp/aspnet/core/web-api/?view=aspnetcore-6.0
+
+■メモ
+属性
+[Route]	コントローラーまたはアクションの URL パターンを指定します。
+[Bind]	モデル バインドのために含めるプレフィックスとプロパティを指定します。
+[HttpGet]	HTTP GET アクション動詞をサポートするアクションを特定します。
+[Consumes]	アクションが受け取るデータ型を指定します。
+[Produces]	アクションによって返すデータ型を指定します。
+
+
+
+■POSTMAN
+Setting→General→SSL証明書をOFF
+
+
+
