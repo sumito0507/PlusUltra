@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Backend": {
+    "ASPNET_Backend": {
       "commandName": "Project",
       "launchUrl": "swagger",
       "environmentVariables": {

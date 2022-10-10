@@ -5,8 +5,25 @@ https://localhost:7235/weatherforecast
 ■参考
 チュートリアル: Visual Studio での Angular を使用した ASP.NET Core アプリの作成
 https://learn.microsoft.com/ja-jp/visualstudio/javascript/tutorial-asp-net-core-with-angular?view=vs-2022
+
+ASP.NET Core 3.1 Web API の .NET 版との違い
+http://www.surferonwww.info/BlogEngine/post/2020/05/15/aspnet-core-3-web-api.aspx
+
+コントローラーを利用したシンプルな ASP.NET Core Web API アプリケーションの作成 (C#プログラミング)
+https://www.ipentec.com/document/csharp-asp-net-core-web-api-create-simple-api-application-using-controller
+
 ASP.NET Core を使って Web API を作成する
 https://learn.microsoft.com/ja-jp/aspnet/core/web-api/?view=aspnetcore-6.0
+
+ASP.NET Core 6.0 Web APIのチュートリアルを丁寧にやってみた
+https://hirahira.blog/asp-net-core6-webapi-tutorial/
+
+ASP.NET Core 5 のルーティングの基本
+https://blog.beachside.dev/entry/2020/12/23/144444
+
+【ASP.NET Core MVC入門】③Controller、Viewの使い方と外部APIからHTTP(GET)する方法を解説！
+https://tech-lab.sios.jp/archives/30714
+
 
 ■メモ
 属性
@@ -21,5 +38,9 @@ https://learn.microsoft.com/ja-jp/aspnet/core/web-api/?view=aspnetcore-6.0
 ■POSTMAN
 Setting→General→SSL証明書をOFF
 
+■Controller
+・"Controllers"フォルダ上で右クリックで「コントローラーの追加」。
+・「読み取り/書き込みアクションのあるMVSコントローラー」をクリック。
+・「読み取り/書き込みアクションがあるAPIコントローラー」をクリックし、任意の名称で追加。」
 
 
