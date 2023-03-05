@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp3_NavigationView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:muxc="http://schemas.modernwpf.com/2019"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        xmlns:local="clr-namespace:WpfApp3_NavigationView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1010" ResizeMode="CanResizeWithGrip">
+  <muxc:NavigationView
+        x:Name="NaviView"
+        Header="★ヘッダー★"
+        IsBackButtonVisible="Collapsed"
+        IsSettingsVisible="False"
+        IsTitleBarAutoPaddingEnabled="False"
+        PaneDisplayMode="Auto"
+        PaneTitle=""
+        SelectionChanged="NaviView_SelectionChanged">
+    <muxc:NavigationView.MenuItems>
+      <muxc:NavigationViewItem
+                Content="ホーム"
+                Icon="Home"
+                IsSelected="True"
+                Tag="{x:Static local:NaviIcon.Home}" />
+      <muxc:NavigationViewItem
+                Content="アカウント"
+                Icon="Contact"
+                Tag="{x:Static local:NaviIcon.Account}" />
+      <muxc:NavigationViewItem
+                Content="ドキュメント"
+                Icon="Page2"
+                Tag="{x:Static local:NaviIcon.Document}" />
+      <muxc:NavigationViewItem Content="ダウンロード" Icon="Download" />
+      <muxc:NavigationViewItem Content="ミュージック" Icon="Audio" />
+      <muxc:NavigationViewItem Content="ビデオ" Icon="Video" />
+      <muxc:NavigationViewItem Content="編集" Icon="Edit" />
+      <muxc:NavigationViewItem Content="ネットワーク" Icon="Globe" />
+      <muxc:NavigationViewItem Content="メール" Icon="Mail" />
+      <muxc:NavigationViewItem Content="すべてのアプリ" Icon="AllApps" />
+      <muxc:NavigationViewItem Content="検索" Icon="Find" />
+      <muxc:NavigationViewItem Content="計算" Icon="Calculator" />
+      <muxc:NavigationViewItem Content="カレンダー" Icon="Calendar" />
+      <muxc:NavigationViewItem Content="ゴミ箱" Icon="Delete" />
+    </muxc:NavigationView.MenuItems>
+
+    <ScrollViewer Margin="0,0,0,12">
+      <ui:Frame x:Name="ContentFrame" Padding="12,0,12,12" />
+    </ScrollViewer>
+  </muxc:NavigationView>
+</Window>

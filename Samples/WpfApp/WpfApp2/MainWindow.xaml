@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True" ResizeMode="CanResizeWithGrip">
+        <!-- Window content here -->
+  <Window.Resources>
+    <Style TargetType="ui:SimpleStackPanel">
+      <Setter Property="Spacing" Value="6" />
+    </Style>
+  </Window.Resources>
+
+  <ui:SimpleStackPanel Margin="6">
+    <ui:SimpleStackPanel Orientation="Horizontal">
+      <Button Click="Button_Click" Content="Button1" />
+      <Button Content="Button2" />
+      <Button Content="Button3" Style="{StaticResource AccentButtonStyle}" />
+      <CheckBox Content="CheckBox1" IsChecked="True" />
+      <CheckBox Content="CheckBox2" />
+      <RadioButton Content="RadioButton1" IsChecked="True" />
+      <RadioButton Content="RadioButton2" />
+    </ui:SimpleStackPanel>
+
+    <ui:SimpleStackPanel Orientation="Horizontal">
+      <TextBlock
+                Width="200"
+                FontFamily="UD Digi Kyokasho NK-R"
+                FontSize="36"
+                Text="abcdあいうえおかきくけこたちつてと123"
+                TextWrapping="Wrap" />
+      <ComboBox VerticalAlignment="Center" SelectedIndex="0">
+        <ComboBoxItem Content="イイイイ" />
+        <ComboBoxItem Content="ロロロロ" />
+        <ComboBoxItem Content="ハハハハ" />
+      </ComboBox>
+      <Calendar />
+      <Slider
+                Maximum="100"
+                Orientation="Vertical"
+                Value="20" />
+      <Slider
+                Maximum="10"
+                Orientation="Vertical"
+                TickPlacement="Both"
+                Value="8" />
+    </ui:SimpleStackPanel>
+
+    <TabControl Style="{StaticResource TabControlPivotStyle}">
+      <TabItem Header="タブ1" IsSelected="True">
+        <ui:SimpleStackPanel Orientation="Horizontal">
+          <ui:ToggleSwitch IsOn="True" />
+          <ui:ToggleSwitch IsOn="False" />
+          <ui:HyperlinkButton Content="Qiita" NavigateUri="https://qiita.com/" />
+          <ui:ProgressRing
+                        Width="50"
+                        Height="50"
+                        IsActive="True" />
+          <TextBox ui:ControlHelper.PlaceholderText="何か入力してください" Text="" />
+        </ui:SimpleStackPanel>
+      </TabItem>
+
+      <TabItem Header="タブ2" />
+      <TabItem Header="タブ3" />
+      <TabItem Header="タブ4" />
+    </TabControl>
+  </ui:SimpleStackPanel>
+</Window>
