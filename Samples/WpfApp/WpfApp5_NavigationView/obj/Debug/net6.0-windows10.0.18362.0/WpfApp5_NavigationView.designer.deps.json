@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Microsoft.UI.Xaml/2.8.2": {
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1264.42"
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.1264.42": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.1264.42",
+            "fileVersion": "1.0.1264.42"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.1264.42",
+            "fileVersion": "1.0.1264.42"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.1264.42",
+            "fileVersion": "1.0.1264.42"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.1264.42"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.1264.42"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.1264.42"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.UI.Xaml/2.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JcEwDcBcpylvO79/B3wnIpwtXDUvtk/IE1r7P3RMt5YSfBsAAoZzZJtmSCERRonhR+NEQXkgRDn9jXVfqsyftg==",
+      "path": "microsoft.ui.xaml/2.8.2",
+      "hashPath": "microsoft.ui.xaml.2.8.2.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.1264.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7OBUTkzQ5VI/3gb0ufi5U4zjuCowAJwQg2li0zXXzqkM+S1kmOlivTy1R4jAW+gY5Vyg510M+qMAESCQUjrfgA==",
+      "path": "microsoft.web.webview2/1.0.1264.42",
+      "hashPath": "microsoft.web.webview2.1.0.1264.42.nupkg.sha512"
+    }
+  }
+}

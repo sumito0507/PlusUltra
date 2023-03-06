@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "oHIGLnZ5JZ7bVOjisp09ZHlUajHoqtkuDteb8LhQux2w48lELrkwVUeTjfpcLWnogyA5jIujU9g8/KThphiZcg==",
+  "success": true,
+  "projectFilePath": "C:\\00_Project\\10_Git\\PlusUltra\\Samples\\WpfApp\\WpfApp5_NavigationView\\WpfApp5_NavigationView.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sumip\\.nuget\\packages\\microsoft.ui.xaml\\2.8.2\\microsoft.ui.xaml.2.8.2.nupkg.sha512",
+    "C:\\Users\\sumip\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\microsoft.web.webview2.1.0.1264.42.nupkg.sha512",
+    "C:\\Users\\sumip\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.1\\microsoft.windows.sdk.buildtools.10.0.22621.1.nupkg.sha512",
+    "C:\\Users\\sumip\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.230217.4\\microsoft.windowsappsdk.1.2.230217.4.nupkg.sha512",
+    "C:\\Users\\sumip\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.28\\microsoft.windows.sdk.net.ref.10.0.22621.28.nupkg.sha512"
+  ],
+  "logs": []
+}
