@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsMVVM", "WindowsFormsMVVM\WindowsFormsMVVM.csproj", "{3A1248D5-CA44-4092-A755-1589D7C56E4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{250CFBBC-40AD-4596-A6C9-D4886B7DCBDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{250CFBBC-40AD-4596-A6C9-D4886B7DCBDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{930123FF-4F3E-464C-9680-42FD95E8DE81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,26 @@ Global
 		{250CFBBC-40AD-4596-A6C9-D4886B7DCBDF}.Release|x64.Build.0 = Release|Any CPU
 		{250CFBBC-40AD-4596-A6C9-D4886B7DCBDF}.Release|x86.ActiveCfg = Release|Any CPU
 		{250CFBBC-40AD-4596-A6C9-D4886B7DCBDF}.Release|x86.Build.0 = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|ARM.Build.0 = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|x64.Build.0 = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Debug|x86.Build.0 = Debug|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|ARM.ActiveCfg = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|ARM.Build.0 = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|ARM64.Build.0 = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|x64.ActiveCfg = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|x64.Build.0 = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|x86.ActiveCfg = Release|Any CPU
+		{930123FF-4F3E-464C-9680-42FD95E8DE81}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
