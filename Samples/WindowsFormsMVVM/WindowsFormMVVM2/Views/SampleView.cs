@@ -20,13 +20,20 @@ namespace WindowsFormMVVM2.Views
             _viewModel = new SampleViewModel();
             // テキストボックスのバインド
             //this.textBox1.DataBindings.Add(nameof(textBox1.Text), _viewModel, nameof(_viewModel.SampleText));
-            this.textBox1.DataBindings.Add(nameof(textBox1.Text), _viewModel, nameof(_viewModel.SampleText), true, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox1.DataBindings.Add(nameof(textBox1.Text), _viewModel, nameof(_viewModel.TextSample), true, DataSourceUpdateMode.OnPropertyChanged);
             // リッチテキストボックスのバインド
-            this.richTextBox1.DataBindings.Add(nameof(richTextBox1.Text), _viewModel, nameof(_viewModel.SampleRichText));
+            this.richTextBox1.DataBindings.Add(nameof(richTextBox1.Text), _viewModel, nameof(_viewModel.RichTextBoxSample));
             // コンボボックス（選択し）のバインド
-            this.comboBox1.DataBindings.Add(nameof(comboBox1.DataSource), _viewModel, nameof(_viewModel.SampleComboBoxItems), true);
+            this.comboBox1.DataBindings.Add(nameof(comboBox1.DataSource), _viewModel, nameof(_viewModel.ComboBoxSampleItems), true);
             // コンボボックス（表示名）のバインド
-            this.comboBox1.DataBindings.Add(nameof(comboBox1.Text), _viewModel, nameof(_viewModel.SampleComboBoxSelectedText), true, DataSourceUpdateMode.OnPropertyChanged);
+            this.comboBox1.DataBindings.Add(nameof(comboBox1.Text), _viewModel, nameof(_viewModel.ComboBoxSampleSelectedText), true, DataSourceUpdateMode.OnPropertyChanged);
+            // ボタンのバインド
+            this.button1.Click += _viewModel.ShowMessage;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

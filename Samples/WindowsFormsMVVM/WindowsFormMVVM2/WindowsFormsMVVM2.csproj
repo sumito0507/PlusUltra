@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\BaseICommand.cs" />
+    <Compile Include="Command\SampleButtonCommand.cs" />
     <Compile Include="Models\SampleModel.cs" />
     <Compile Include="ViewModels\SampleViewModel.cs" />
     <Compile Include="Views\SampleView.cs">

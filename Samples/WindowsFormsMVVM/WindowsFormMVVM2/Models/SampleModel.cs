@@ -8,10 +8,21 @@ namespace WindowsFormMVVM2.Models
 {
     public class SampleModel
     {
-        public string SampleText { get; set; } = "";
-        public string SampleRichText { get; set; } = "";
-
-        public List<string> SampleComboBoxItems { get; set; } = new List<string>();
-        public string SampleComboBoxSelectedText { get; set; } = "";
+        /// <summary>
+        /// テキストボックスの文字列
+        /// </summary>
+        public string TextSample { get; set; } = "";
+        /// <summary>
+        /// リッチテキストの文字列
+        /// </summary>
+        public string RichTextBoxSample { get; set; } = "";
+        /// <summary>
+        /// コンボボックスのアイテムリスト
+        /// </summary>
+        public List<string> ComboBoxSampleItems { get; set; } = new List<string>();
+        /// <summary>
+        /// コンボボックスの選択テキスト
+        /// </summary>
+        public string ComboBoxSampleSelectedText { get; set; } = "";
     }
 }

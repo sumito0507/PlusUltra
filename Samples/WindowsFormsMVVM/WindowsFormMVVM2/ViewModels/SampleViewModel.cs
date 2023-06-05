@@ -7,59 +7,85 @@ using System.Threading.Tasks;
 namespace WindowsFormMVVM2.ViewModels
 {
     using System.ComponentModel;
+    using System.Windows.Forms;
+    using System.Windows.Input;
+    using WindowsFormMVVM2.Command;
     using WindowsFormMVVM2.Models;
 
+    /// <summary>
+    /// WindowsFormsアプリでのMVVMパターンサンプル
+    /// https://soft-rime.com/post-10769/
+    /// </summary>
     public class SampleViewModel : INotifyPropertyChanged
     {
         private SampleModel _model;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string SampleText
+        #region プロパティ
+        public string TextSample
         {
-            get { return _model.SampleText; }
+            get { return _model.TextSample; }
             set
             {
-                _model.SampleText = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SampleText)));
-                SampleRichText = value;
+                _model.TextSample = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TextSample)));
+                RichTextBoxSample = value;
             }
         }
 
-        public string SampleRichText
+        public string RichTextBoxSample
         {
-            get { return _model.SampleRichText; }
+            get { return _model.RichTextBoxSample; }
             set
             {
-                _model.SampleRichText = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SampleRichText)));
+                _model.RichTextBoxSample = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(RichTextBoxSample)));
             }
         }
 
-        public List<string> SampleComboBoxItems
+        public List<string> ComboBoxSampleItems
         {
-            get { return _model.SampleComboBoxItems; }
+            get { return _model.ComboBoxSampleItems; }
             set
             {
-                _model.SampleComboBoxItems = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SampleComboBoxItems)));
+                _model.ComboBoxSampleItems = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ComboBoxSampleItems)));
             }
         }
-        public string SampleComboBoxSelectedText
+        public string ComboBoxSampleSelectedText
         {
-            get { return _model.SampleComboBoxSelectedText; }
+            get { return _model.ComboBoxSampleSelectedText; }
             set
             {
-                _model.SampleComboBoxSelectedText = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SampleComboBoxSelectedText)));
+                _model.ComboBoxSampleSelectedText = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ComboBoxSampleSelectedText)));
             }
         }
 
+        public ICommand ButtonSample
+        {
+            //get { return new BaseICommand(ShowMessage); }
+            get;
+        }
+        bool _enabled = true;
+        bool canExecute() => _enabled;
+
+        #endregion
         public SampleViewModel()
         {
             _model = new SampleModel();
-            SampleComboBoxItems.AddRange(new List<string> { "ネザーランドドワーフ", "ミニレッキス", "ドワーフホト", "ホーランドロップ", "ロップイヤー" });
-            SampleComboBoxSelectedText = "ミニレッキス";
+            ComboBoxSampleItems.AddRange(new List<string> { "ネザーランドドワーフ", "ミニレッキス", "ドワーフホト", "ホーランドロップ", "ロップイヤー" });
+            ComboBoxSampleSelectedText = "ミニレッキス";
+
+            //ButtonSample = new SampleButtonCommand((() => ShowMessage()), canExecute);
+            //ButtonSample = ShowMessage();
+        }
+
+        public void ShowMessage(object sender, EventArgs e)
+        {
+            string message = $"TextBox : {TextSample}\nRichTextBox : {RichTextBoxSample}\nComboBox : {ComboBoxSampleSelectedText}";
+            MessageBox.Show(message, "コントロール");
         }
     }
 }
